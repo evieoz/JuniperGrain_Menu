@@ -1,5 +1,5 @@
 
-const API = "https://script.google.com/macros/s/AKfycbwzcfJMXk_-g254nh0sJgpIM-BeigTpuc-eyu_D0lVzJvzyyaFe8KoPd9QjcLsNJt6B/exec";
+const API = "https://script.google.com/macros/s/AKfycbzmq7kGH_N4OI-OMnGPb62XOlm7AtVhYwVA3iChlWhVUbSbpAdeWBpKnmILsuMh__Ij/exec";
 
 const statusMessage = document.getElementById("status");
 const menuContainer = document.getElementById("menu");
