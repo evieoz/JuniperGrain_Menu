@@ -1,27 +1,325 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Menu | Juniper & Grain</title>
+
+  <meta name="theme-color" content="#e9c6c2">
+  <meta name="description" content="Juniper & Grain — good coffee, good food, good days.">
+
+  <title>Juniper & Grain | Coffee & Little Rituals</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <img src="img/logo.png" alt="Juniper & Grain logo" class="logo">
-    <h1>Our Menu</h1>
+
+  <!-- TOP ANNOUNCEMENT -->
+  <div class="announcement">
+    ✳ A LITTLE COFFEE, A LITTLE JOY, A LOT OF LOVE ✳
+  </div>
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="site-header" id="top">
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="wordmark" href="#top">
+        J<span>&</span>G<span class="wordmark-dot">.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#menu-section">The Menu</a>
+      </div>
+
+      <a class="nav-cta" href="#menu-section">
+        EXPLORE MENU ↗
+      </a>
+    </nav>
+
+    <!-- EDITORIAL WELCOME -->
+    <div class="hero" id="story">
+
+      <div class="hero-copy">
+        <p class="eyebrow">
+          THE NEIGHBORHOOD'S LITTLE LOVE LETTER
+        </p>
+
+        <h1>
+          Meet me<br>
+          at <em>Juniper</em><span class="period">.</span>
+        </h1>
+
+        <p class="hero-description">
+          For slow mornings, long conversations, and
+          one more sip before the day begins.
+        </p>
+
+        <a class="primary-link" href="#menu-section">
+          FIND YOUR NEW USUAL ↗
+        </a>
+
+        <p class="hero-scribble">
+          made for the little moments ♡
+        </p>
+      </div>
+
+      <div class="hero-art">
+
+        <div class="hero-art-frame">
+          <span class="art-sun" aria-hidden="true">✳</span>
+
+          <img src="img/logo.png"
+               alt="Juniper & Grain café logo">
+
+          <span class="art-caption">
+            coffee & company<br>
+            since the first sip
+          </span>
+        </div>
+
+        <span class="sticker sticker-round">
+          YOUR<br>DAILY<br>RITUAL ✦
+        </span>
+
+        <span class="sticker sticker-note">
+          stay a while ↗
+        </span>
+
+        <span class="art-star art-star-one" aria-hidden="true">
+          ✷
+        </span>
+
+        <span class="art-star art-star-two" aria-hidden="true">
+          ✳
+        </span>
+
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>EST. IN THE LITTLE MOMENTS</span>
+      <span>SCROLL TO EXPLORE ↓</span>
+      <span>GOOD DAYS START HERE</span>
+    </div>
+
   </header>
 
-  <main>
-    <!-- Your script builds one button per category in here. -->
-    <nav id="filters"></nav>
+  <!-- SCROLLING CAFÉ BANNER -->
+  <div class="ticker"
+       aria-label="Good coffee, good company, and little treats">
 
-    <!-- Loading and error messages go here. -->
-    <p id="status"></p>
+    <div class="ticker-track" aria-hidden="true">
+      <span>
+        GOOD COFFEE ✳ GOOD COMPANY ✳ LITTLE TREATS ✳
+        SLOW MORNINGS ✳ STAY A WHILE ✳
+      </span>
 
-    <!-- Your script builds the category headings and item cards in here. -->
-    <section id="menu"></section>
+      <span>
+        GOOD COFFEE ✳ GOOD COMPANY ✳ LITTLE TREATS ✳
+        SLOW MORNINGS ✳ STAY A WHILE ✳
+      </span>
+    </div>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <section class="intro-section" aria-labelledby="intro-title">
+
+    <p class="eyebrow">A NOTE FROM OUR TABLE</p>
+
+    <h2 id="intro-title">
+      The best things in life<br>
+      are <em>unhurried.</em>
+    </h2>
+
+    <p>
+      Something warm in your hands, something delicious
+      on your plate, and nowhere else you need to be.
+      That's our kind of morning.
+    </p>
+
+    <span class="intro-flower" aria-hidden="true">✿</span>
+  </section>
+
+  <!-- OUR FAVORITES -->
+  <section class="favorites-section"
+           id="favorites"
+           aria-labelledby="favorites-title">
+
+    <div class="section-topline">
+      <span>01 / THE LITTLE OBSESSIONS</span>
+      <span>HANDPICKED WITH LOVE</span>
+    </div>
+
+    <div class="favorites-heading">
+      <div>
+        <p class="eyebrow">A FEW THINGS WE ADORE</p>
+
+        <h2 id="favorites-title">
+          Our <em>favorites.</em>
+        </h2>
+      </div>
+
+      <p>
+        Consider this your sign to treat yourself.
+      </p>
+    </div>
+
+    <div class="favorites-grid">
+
+      <!-- COFFEE FAVORITE -->
+      <a class="favorite favorite-one" href="#menu-section">
+        <span class="favorite-index">01 / COFFEE</span>
+
+        <span class="favorite-illustration" aria-hidden="true">
+          ☕
+        </span>
+
+        <span class="favorite-stamp">
+          THE DAILY FIX
+        </span>
+
+        <span class="favorite-name">
+          A little pick-me-up
+        </span>
+
+        <span class="favorite-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <!-- BAKERY FAVORITE -->
+      <a class="favorite favorite-two" href="#menu-section">
+        <span class="favorite-index">02 / BAKERY</span>
+
+        <span class="favorite-illustration" aria-hidden="true">
+          🥐
+        </span>
+
+        <span class="favorite-stamp">
+          SWEET ESCAPE
+        </span>
+
+        <span class="favorite-name">
+          Something flaky & lovely
+        </span>
+
+        <span class="favorite-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <!-- BREAKFAST FAVORITE -->
+      <a class="favorite favorite-three" href="#menu-section">
+        <span class="favorite-index">03 / BREAKFAST</span>
+
+        <span class="favorite-illustration" aria-hidden="true">
+          🍳
+        </span>
+
+        <span class="favorite-stamp">
+          SLOW MORNING CLUB
+        </span>
+
+        <span class="favorite-name">
+          Breakfast is a love language
+        </span>
+
+        <span class="favorite-arrow" aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+    <p class="favorites-footnote">
+      ✳ THE FULL LINEUP IS WAITING BELOW ✳
+    </p>
+
+  </section>
+
+  <!-- MAIN MENU: KEEP THESE IDS FOR JAVASCRIPT -->
+  <main id="menu-section">
+
+    <div class="menu-intro">
+      <p class="eyebrow">
+        02 / SOMETHING FOR EVERY MOOD
+      </p>
+
+      <h2 class="menu-title">
+        The <em>menu.</em>
+      </h2>
+
+      <p>
+        Pick your craving. We'll take it from here.
+      </p>
+
+      <span class="menu-doodle" aria-hidden="true">♡</span>
+    </div>
+
+    <!-- JavaScript builds category filter buttons here -->
+    <nav id="filters" aria-label="Filter menu categories"></nav>
+
+    <!-- JavaScript displays loading/errors here -->
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <!-- JavaScript creates menu headings and food cards here -->
+    <section id="menu" aria-label="Food and drink menu"></section>
+
   </main>
+
+  <!-- CLOSING MESSAGE -->
+  <section class="closing-note" aria-labelledby="closing-title">
+
+    <span class="closing-sparkle" aria-hidden="true">✷</span>
+
+    <p class="eyebrow">COME AS YOU ARE</p>
+
+    <h2 id="closing-title">
+      There's always<br>
+      room at <em>our table.</em>
+    </h2>
+
+    <a href="#top">BACK TO THE TOP ↑</a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div class="footer-about">
+        <p class="footer-brand">
+          Juniper <em>&</em> Grain<span>.</span>
+        </p>
+
+        <p>
+          Good coffee. Good food. Good days.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>EXPLORE</h3>
+
+        <a href="#story">Our Story</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#menu-section">Menu</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>THE VIBE</h3>
+
+        <p>Slow mornings</p>
+        <p>Warm conversations</p>
+        <p>Little everyday rituals</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© JUNIPER & GRAIN — A CAFÉ CONCEPT</span>
+      <span>MADE WITH ♡ AND A LITTLE EXTRA ESPRESSO</span>
+    </div>
+
+  </footer>
+
 </body>
 </html>
