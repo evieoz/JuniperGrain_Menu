@@ -1,9 +1,458 @@
-/* Juniper & Grain brand colors, from the client brief */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Italiana&display=swap');
+
+/* JUNIPER & GRAIN - VINTAGE CAFE */
+
 :root {
-  --sage: #3f5a46;
-  --terracotta: #c8693f;
-  --cream: #f7f2e9;
-  --espresso: #2b211c;
+    --cream: #faf5ed;
+    --pink: #e9c6c2;
+    --sage: #82937b;
+    --forest: #354c3d;
+    --brown: #49352f;
+    --orange: #bd7153;
+    --white: #fffdf9;
 }
 
-/* Your styles go below. */
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--brown);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: #ead6ce;
+    padding: 40px 20px 65px;
+    border-bottom: 7px solid var(--forest);
+}
+
+header::before {
+    content: "✳ JUNIPER & GRAIN / THE DAILY RITUAL ✳";
+    display: block;
+    color: var(--forest);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+}
+
+/* LOGO - FULL IMAGE FITS */
+
+.logo {
+    display: block;
+    width: 155px;
+    height: 115px;
+    max-width: 100%;
+    object-fit: contain;
+    background: var(--white);
+    padding: 10px;
+    border: 1px solid #d7b8ae;
+    border-radius: 24px;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 25px #49352f18;
+}
+
+/* MAIN TITLE */
+
+h1 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(48px, 7vw, 90px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: var(--forest);
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+header::after {
+    content: "GOOD COFFEE ✦ GOOD FOOD ✦ GOOD DAYS";
+    display: block;
+    margin-top: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #936c60;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 30px 100px;
+}
+
+/* FILTER BUTTONS */
+
+#filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+#filters button {
+    background: transparent;
+    border: 1.5px solid var(--forest);
+    color: var(--forest);
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#filters button:hover {
+    background: var(--pink);
+    transform: translateY(-3px) rotate(-1deg);
+}
+
+#filters button.active {
+    background: var(--forest);
+    color: var(--white);
+    box-shadow: 5px 5px 0 var(--pink);
+}
+
+#filters button:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 4px;
+}
+
+/* STATUS */
+
+#status {
+    text-align: center;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+#status:empty {
+    display: none;
+}
+
+/* CATEGORY HEADINGS */
+
+#menu h2 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-family: 'Italiana', serif;
+    font-size: clamp(45px, 6vw, 68px);
+    font-weight: 400;
+    color: var(--forest);
+    margin: 65px 0 30px;
+    line-height: 1.2;
+}
+
+#menu h2::before {
+    content: "✳";
+    color: var(--orange);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+}
+
+#menu h2::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #d9c9bd;
+}
+
+#menu h2:first-child {
+    margin-top: 0;
+}
+
+/* MENU GRID */
+
+#menu .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* MENU CARDS */
+
+#menu .grid .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid #e9dcd1;
+    border-radius: 4px 4px 24px 4px;
+    box-shadow: 6px 7px 0 #e8d7cb;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#menu .grid .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 10px 13px 0 var(--pink);
+}
+
+/* FOOD IMAGES */
+
+#menu .grid .card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 230px;
+    min-height: 230px;
+    max-height: 230px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    opacity: 1;
+    filter: none;
+    background: #eee8df;
+}
+
+/* CARD CONTENT */
+
+#menu .grid .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--brown);
+    margin: 0 0 12px;
+}
+
+.description,
+.card-body > p:not(.price):not(.sold) {
+    color: #85736b;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+/* POPULAR BADGE */
+
+.badge {
+    display: inline-block;
+    vertical-align: middle;
+    background: var(--pink);
+    color: #774a40;
+    padding: 5px 9px;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+/* TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.tags li {
+    background: #e8eee5;
+    color: var(--forest);
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* PRICES */
+
+.price {
+    font-family: 'Playfair Display', serif;
+    color: var(--orange);
+    font-size: 25px;
+    font-weight: 600;
+    margin: auto 0 0;
+    padding-top: 15px;
+}
+
+/* SOLD OUT - KEEP PHOTO CLEAR */
+
+#menu .grid .card.is-sold {
+    opacity: 1;
+}
+
+#menu .grid .card.is-sold img {
+    opacity: 1;
+    filter: none;
+}
+
+.sold {
+    display: inline-block;
+    align-self: flex-start;
+    background: #f5dfdb;
+    color: #a35e54;
+    border: 1px solid #edc9c2;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 12px 0 0;
+}
+
+/* BOTTOM DECORATION */
+
+main::after {
+    content: "✳ MADE WITH LOVE & A LITTLE EXTRA ESPRESSO ✳";
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+    padding-top: 35px;
+    border-top: 1px solid #d9c9bd;
+    color: var(--forest);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+    #menu .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    main {
+        padding: 40px 22px 70px;
+    }
+
+    #menu .grid .card img {
+        height: 210px;
+        min-height: 210px;
+        max-height: 210px;
+    }
+}
+
+/* PHONE */
+
+@media (max-width: 550px) {
+    header {
+        padding: 30px 20px 50px;
+    }
+
+    header::before {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        width: 135px;
+        height: 100px;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: clamp(44px, 11vw, 60px);
+        letter-spacing: -1px;
+    }
+
+    header::after {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    main {
+        padding: 30px 18px 60px;
+    }
+
+    #filters {
+        gap: 9px;
+        margin-bottom: 40px;
+    }
+
+    #filters button {
+        padding: 10px 15px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    #menu h2 {
+        font-size: 45px;
+        margin: 45px 0 25px;
+    }
+
+    #menu .grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    #menu .grid .card img {
+        height: 240px;
+        min-height: 240px;
+        max-height: 240px;
+    }
+
+    #menu .grid .card-body {
+        padding: 22px;
+    }
+
+    main::after {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        transition: none !important;
+    }
+}
